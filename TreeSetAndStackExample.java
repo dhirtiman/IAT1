@@ -50,3 +50,25 @@ public class TreeSetAndStackExample {
                 + "\nFinal Stack: " + stack);
     }
 }
+
+
+/*
+
+TreeSet Elements (Sorted and Unique): [5, 10, 15, 20]
+First Element: 5
+Last Element: 20
+Higher than 10: 15
+Lower than 10: 5
+After Removing 15: [5, 10, 20]
+
+Stack Elements (LIFO Order): [Apple, Banana, Cherry, orange]
+Top Element (Peek): orange
+Popped Element: orange
+Stack After Pop: [Apple, Banana, Cherry]
+Is Stack Empty? false
+Position of Banana in Stack: 2
+
+Final TreeSet: [5, 10, 20]
+Final Stack: [Apple, Banana, Cherry]
+
+*/
