@@ -1,5 +1,3 @@
-package threads;
-
 // File: ThreadOne.java
 public class ThreadOne extends Thread {
 

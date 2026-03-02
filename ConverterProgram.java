@@ -1,8 +1,9 @@
 // 1 Write a program to convert a given Decimal number to Binary , Octal and Hexadecimal using recursive functions
+import java .io.*;
 import java.util.Scanner;
 
 
-class Converter {
+class Coverter {
 
    static int toBinary(int n) {
 	if(n==0)
@@ -18,8 +19,8 @@ class Converter {
 	if(n==0)
 	   return "";
 	int remainder = n%16;
-	char hexChar = (remainder<10)?(char)(remainder+'0'):(char)(remainder-10+'A');
-	return toHexaDecimal(n/16)+hexChar;
+	char hexChar(remainder<10)?(char)(remainder+'0'):(char)(remainder-10+'A');
+	returntoHexaDecimal(n/16)+hexChar;
    }
 
 }
@@ -29,18 +30,17 @@ class Converter {
 public class ConverterProgram{
 
 	public static void main(String[] args){
-	Scanner sc = new Scanner(System.in);
-	   System.out.print("Enter a decimal Number: ");
+	   Converter cnv = new Converter();
+           Scanner sc = new Scanner(System.in);
+	   system.out.print("Enter a decimal Number: ");
 	   int decimal = sc.nextInt();
-	   int bin = Converter.toBinary(decimal);
-	   int oct = Converter.toOctal(decimal);
-	   String hex = Converter.toHexaDecimal(decimal);
+	   int bin = cnv.toBinary(decimal);
+	   int oct = cnv.toOctal(decimal);
+	   String hex = cnv.toHexaDecimal(decimal);
 
 	   System.out.println("\nBinary: "+bin);
 	   System.out.println("Octal: "+oct);
-	   System.out.println("HexaDecimal: "+hex);  	
-
-	 				
+	   System.out.println("HexaDecimal: "+hex);  				
 	}
 }
 
@@ -48,14 +48,7 @@ public class ConverterProgram{
 
 	 
 	 
-/*
-Enter a decimal Number: 69
 
-Binary: 1000101
-Octal: 105
-HexaDecimal: 45
-
-*/
 
 
 	
