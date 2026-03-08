@@ -1,114 +1,117 @@
+// 23. Demonstrate Swings.
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
 public class StudentRegistrationSwing extends JFrame implements ActionListener {
-   private JTextField txtName,txtAge,txtContact,txtFather,txtIncome;
-   private JButton btnSubmit;
-   Label lblMessage;
-   
-   public StudentRegistrationSwing() {
+	private JTextField txtName, txtAge, txtContact, txtFather, txtIncome;
+	private JButton btnSubmit;
+	Label lblMessage;
 
-	setTitle("Student Registration Form");
-	setSize(450,350);
+	public StudentRegistrationSwing() {
 
-	setLocationRelativeTo(null);
-	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setTitle("Student Registration Form");
+		setSize(450, 350);
 
-	setLayout(new GridLayout(6,2,10,10));
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-	add(new JLabel("Name:"));
-	txtName = new JTextField();
-	add(txtName);
+		setLayout(new GridLayout(6, 2, 10, 10));
 
-	add(new JLabel("Age:"));
-	txtAge = new JTextField();
-	add(txtAge);
+		add(new JLabel("Name:"));
+		txtName = new JTextField();
+		add(txtName);
 
-	add(new JLabel("Contact:"));
-	txtContact = new JTextField();
-	add(txtContact);
+		add(new JLabel("Age:"));
+		txtAge = new JTextField();
+		add(txtAge);
 
-	add(new JLabel("Father's Name:"));
-	txtFather = new JTextField();
-	add(txtFather);
+		add(new JLabel("Contact:"));
+		txtContact = new JTextField();
+		add(txtContact);
 
-	
-	add(new JLabel("Annual Income"));
-	txtIncome = new JTextField();
-	add(txtIncome);
+		add(new JLabel("Father's Name:"));
+		txtFather = new JTextField();
+		add(txtFather);
 
-	btnSubmit = new JButton("Submit");
-	add(new JLabel());
-	add(btnSubmit);
+		add(new JLabel("Annual Income"));
+		txtIncome = new JTextField();
+		add(txtIncome);
 
-	btnSubmit.addActionListener(this);
+		btnSubmit = new JButton("Submit");
+		add(new JLabel());
+		add(btnSubmit);
 
-	setVisible(true);
-   }
-   @Override
-   public void actionPerformed(ActionEvent e) {
-	String name = txtName.getText().trim();
-	String age = txtAge.getText().trim();
-	String contact = txtContact.getText().trim();
-	String father = txtFather.getText().trim();
-	String income = txtIncome.getText().trim();
+		btnSubmit.addActionListener(this);
 
-	if(name.isEmpty() || father.isEmpty()) {
-	   JOptionPane.showMessageDialog(this,
-		  "Name and Father's Name cannot be empty.",
-		   "Error",
-		   JOptionPane.ERROR_MESSAGE);
-	   return;
-	}
-	try {
-	   int ageValue = Integer.parseInt(age);
-	   if(ageValue <= 0 || ageValue > 100) {
-		JOptionPane.showMessageDialog(this,
-		  "Enter valid age (1-100).",
-		   "Error",
-		   JOptionPane.ERROR_MESSAGE);
-	   	return;
-	   }
-	} catch (NumberFormatException ex) {
-		JOptionPane.showMessageDialog(this,
-		  "Age must be numeric.",
-		   "Error",
-		   JOptionPane.ERROR_MESSAGE);
-	   	return;
-	}
-	if (!contact.matches("\\d{10}")) {
-	   JOptionPane.showMessageDialog(this,
-		  "Contact must be 10 digits.",
-		   "Error",
-		   JOptionPane.ERROR_MESSAGE);
-	   	return;
+		setVisible(true);
 	}
 
-	try {
-	   double incomeValue = Double.parseDouble(income);
-	   if(incomeValue<0) {
-	   	 JOptionPane.showMessageDialog(this,
-		  "Income cannot be negative",
-		   "Error",
-		   JOptionPane.ERROR_MESSAGE);
-	   	return;
-	   }
-	}catch(NumberFormatException ex) {
-		
-		JOptionPane.showMessageDialog(this,
-		  "Income must be numeric.",
-		   "Error",
-		   JOptionPane.ERROR_MESSAGE);
-	   	return;
-	   }
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		String name = txtName.getText().trim(),
+				age = txtAge.getText().trim(),
+				contact = txtContact.getText().trim(),
+				father = txtFather.getText().trim(),
+				income = txtIncome.getText().trim();
 
-	   JOptionPane.showMessageDialog(this,
-		  "Registration Succesfull!",
-		   "Success",
-		   JOptionPane.INFORMATION_MESSAGE);
-   }
-   public static void main(String[] args) {
-	new StudentRegistrationSwing();
-   }
+		if (name.isEmpty() || father.isEmpty()) {
+			JOptionPane.showMessageDialog(this,
+					"Name and Father's Name cannot be empty.",
+					"Error",
+					JOptionPane.ERROR_MESSAGE);
+			return;
+		}
+		try {
+			int ageValue = Integer.parseInt(age);
+			if (ageValue <= 0 || ageValue > 100) {
+				JOptionPane.showMessageDialog(this,
+						"Enter valid age (1-100).",
+						"Error",
+						JOptionPane.ERROR_MESSAGE);
+				return;
+			}
+		} catch (NumberFormatException ex) {
+			JOptionPane.showMessageDialog(this,
+					"Age must be numeric.",
+					"Error",
+					JOptionPane.ERROR_MESSAGE);
+			return;
+		}
+		if (!contact.matches("\\d{10}")) {
+			JOptionPane.showMessageDialog(this,
+					"Contact must be 10 digits.",
+					"Error",
+					JOptionPane.ERROR_MESSAGE);
+			return;
+		}
+
+		try {
+			double incomeValue = Double.parseDouble(income);
+			if (incomeValue < 0) {
+				JOptionPane.showMessageDialog(this,
+						"Income cannot be negative",
+						"Error",
+						JOptionPane.ERROR_MESSAGE);
+				return;
+			}
+		} catch (NumberFormatException ex) {
+
+			JOptionPane.showMessageDialog(this,
+					"Income must be numeric.",
+					"Error",
+					JOptionPane.ERROR_MESSAGE);
+			return;
+		}
+
+		JOptionPane.showMessageDialog(this,
+				"Registration Succesfull!",
+				"Success",
+				JOptionPane.INFORMATION_MESSAGE);
+	}
+
+	public static void main(String[] args) {
+		new StudentRegistrationSwing();
+	}
 }
