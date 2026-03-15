@@ -26,7 +26,8 @@ public class JDBCCrudDemo {
             psInsert.setInt(1, 101);
             psInsert.setString(2, "John");
             psInsert.setInt(3, 20);
-            psInsert.executeUpdate();
+            psInsert.addBatch();
+            psInsert.executeBatch();
             System.out.println("Record Inserted Successfully!");
 
             // ------------------ UPDATE ------------------

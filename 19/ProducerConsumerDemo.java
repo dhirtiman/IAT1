@@ -5,5 +5,7 @@ public class ProducerConsumerDemo{
 	  Thread consumer = new Thread(new Consumer(buffer),"Consumer");
 	  producer.start();
 	  consumer.start();
+	  System.out.println(producer.getName());
+	  System.out.println(consumer.getName());
 	}
 }

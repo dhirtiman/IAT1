@@ -5,8 +5,8 @@ public class MultiThreadDemo {
 
     public static void main(String[] args) {
 
-        ThreadOne t1 = new ThreadOne();
-        ThreadTwo t2 = new ThreadTwo();
+        ThreadTwo t1 = new ThreadTwo("Thread One");
+        ThreadTwo t2 = new ThreadTwo("Thread Two");
 
         t1.start(); // Starts ThreadOne
         t2.start(); // Starts ThreadTwo concurrently

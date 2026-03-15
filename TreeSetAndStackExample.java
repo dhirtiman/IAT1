@@ -11,7 +11,7 @@ public class TreeSetAndStackExample {
 	treeSet.add(5);
 	treeSet.add(15);
 	treeSet.add(10); // duplicate
-
+	treeSet.addAll(Arrays.asList(10,20,5,15,10));
 	System.out.println("TreeSet Elements (sorted and unique): "+treeSet);
 
 
