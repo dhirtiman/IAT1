@@ -29,6 +29,48 @@ class Student {
     }
 }
 
+
+/*
+here we have to demonstrate lambda expressions with collection sorting , 
+first import java.util.* for using List,ArrayList,Arrays and Comparator
+
+create a student class with data members String and int 
+constructor and getters and overridde toString() method for formatted object representation
+
+create a List<String> object intialize it with Arrays.asList(strings...)
+print it before
+sort it using lambda exp like list.sort((obj1,obj2) -> obj1.compareTo(obj2)) for asc
+then print it 
+sort it using obj2.compareTo(obj1) for desc the print it
+
+similarly create Integer list add elements sort asc and dsc using lambda and print
+
+create List<Student>  add student objects by using .add(constructor call)
+print it before sorting 
+descibe the lambda exp likewise:
+asc by naame : list.sort((obj1,obj2) -> obj1.getName().compareTo(obj2.getName()))
+desc by marks: list.sort((obj1,obj2) -> Integer.compare(obj2.getMarks(), obj1.getMarks()))
+print the sorted lists
+
+demonstrate Comparator
+
+by
+member asc: list.sort(Comparator.comparing(ClassName::getterForDataMember))
+name asc: students.sort(Comparator.comparing(Student::getName));
+marks asc: students.sort(Comparator.comparing(Student::getMarks));
+
+marks desc + name asc:
+students.sort(Comparator.comparing(Student::getMarks).reversed().thenComparing(Student::getName))
+print the lists for each case
+
+demo stream api sorting 
+declare a List<Student> 
+initialize it with: 
+student.stream().sorted(Comparator.comparing(Student::getMarks).reversed()).toList();
+print the sorted list
+
+*/
+
 public class LambdaSortingDemo {
 
     public static void main(String[] args) {
