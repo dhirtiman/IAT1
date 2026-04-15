@@ -2,6 +2,33 @@
 
 import java.util.*;
 
+/*
+create a TreeSet<Integer> 
+add using add() or addAll() method
+also add few duplicate elements 
+print the TreeSet to show it is sorted and there are no duplicates in it
+access TreeSet elements:
+
+.first() - to get the first element(lowest)
+.last() - to get the last element(highest)
+.higher(10) - to get the closest higher element than 10
+.lower(10) - to get the closest lower element than 10
+
+.remove to delele an element 
+print the tree Set again 
+
+create a Stack<String> 
+add element using push(String) method
+print the stack to show the order of elements: sout(stack)
+demo stack methods:
+
+.peek() - to see the top element 
+.pop()  -  to remove and return the top element
+.isEmpty() - True if stack is empty
+.search(string) -  to find the position of an element in the stack 
+*/
+
+
 public class TreeSetAndStackExample {
    public static void main(String args[]) {
 	TreeSet<Integer> treeSet = new TreeSet<Integer>();

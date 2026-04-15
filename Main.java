@@ -2,6 +2,12 @@
 
 import mypackage.Calculator;
 
+/*
+import foldername.ClassName;
+
+call the ClassName.methodName to demonstrate the concept of importing classes from user defined package and creating packages.
+*/
+
 
 public class Main {
    public static void main (String args[]) {

@@ -1,12 +1,22 @@
-
-
 // File: MultiThreadDemo.java
+
+
+/*
+
+create two MyThread objects with differerent names
+
+start both using .start() 
+observe the interleaving of output from both threads and the main thread
+
+
+*/
+
 public class MultiThreadDemo {
 
     public static void main(String[] args) {
 
-        ThreadTwo t1 = new ThreadTwo("Thread One");
-        ThreadTwo t2 = new ThreadTwo("Thread Two");
+        MyThread t1 = new MyThread("Thread One");
+        MyThread t2 = new MyThread("Thread Two");
 
         t1.start(); // Starts ThreadOne
         t2.start(); // Starts ThreadTwo concurrently
