@@ -23,7 +23,6 @@ public class PatternFileLister {
             }
         });
 
-
         if (matchingFiles != null && matchingFiles.length > 0) {
 
             System.out.println("\nFiles matching pattern '" + pattern + "':");
@@ -32,17 +31,15 @@ public class PatternFileLister {
 
                 System.out.println(
                         file.getName() +
-                        (file.isDirectory()
-                                ? " [DIR]"
-                                : " (" + file.length() + " bytes)")
-                );
+                                (file.isDirectory()
+                                        ? " [DIR]"
+                                        : " (" + file.length() + " bytes)"));
             }
 
         } else {
 
             System.out.println(
-                    "No files match the pattern '" + pattern + "'"
-            );
+                    "No files match the pattern '" + pattern + "'");
         }
 
         sc.close();

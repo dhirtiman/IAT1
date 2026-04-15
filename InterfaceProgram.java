@@ -1,4 +1,11 @@
 // 7. Write a program to implement the Concept of Interface in Java.
+/*
+create an interface with methods without body
+create a class that implements the interface ,
+provide implementation for all methods in the class
+create an object of the class and call the methods
+this is interfaces in action
+*/
 
 interface Animal {
   public void animalSound(); // interface method (does not have a body)

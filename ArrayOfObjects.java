@@ -12,6 +12,16 @@ class Product{
 	}
 }
 
+/*
+just create a class with datamembers
+define constructor to initialize the datamembers
+a method to print the details
+
+create an array of objects using [] and initialize the size to 5
+assign new object to each index of the array of objects
+call the method for each object using a for-each loop
+*/
+
 
 class ArrayOfObjects{
 	

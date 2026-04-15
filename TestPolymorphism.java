@@ -1,5 +1,8 @@
 //6. Write a program to explain the concept of runtime polymorphism in Java.
-
+// create class with method 
+// create subclass that overrides the method of the class
+// create object of the subclass and call the method , this is called runtime
+// polymorphism becuz the method to be called is determined at runtime based on the object type
 class Animal {
 	// method in the superclass
 	public void eat() {

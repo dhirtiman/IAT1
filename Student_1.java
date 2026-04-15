@@ -1,6 +1,25 @@
 // 9. Write a JAVA program to demonstrate static member data 
 // and static member methods Static variables and Methods:
 
+
+/*
+create a class with static variable integer , static unchanged String and
+a static method to display the varible integer
+also create a normal method to display all the static and non static data members
+
+in the constructor of the class increment the static integer variable
+
+create 3 objects of the class 
+call the normal method for each object 
+call the static method once to display the static integer varible 
+
+here the static keywor was used for 
+1. static variable Counter ( this is local to the class and shared by all the objects , it is incremented
+each time the constructor is called)
+2. static varibale college ( this is same for all ojects and is unchanged))
+3. static method showTotalStudents() (this method be called directly using the class name without creating an object)
+*/
+
 public class Student_1 {
     static int Counter = 0; // Shared by all
     String studentName;

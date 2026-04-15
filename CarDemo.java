@@ -13,6 +13,14 @@ public class CarDemo {
     }
 }
 
+/*
+just create a class with datamembers 
+use this keyword to refer to the datamembers 
+use this keyword to call the parameterized constructor from the default constructor
+use this keywordd to call a method from another methodd in the same class
+
+*/
+
 class Car {
     // Instance variables (attributes)
     String brand;
