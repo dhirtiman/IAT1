@@ -1,4 +1,46 @@
 
+/*
+demonstrate various String class methods,
+1. creation of String using lieral and new keyword , print both 
+2. String comparison using == , .equals() ,.equalsIgnoreCase(), .compareTo() (returns 0 or +ve or -ve number)
+3. show string information using .length(), isEmpty()
+4. character acess using .charAt(index), lastIndexOf(String), substring(start,end)
+5. case conversion using toUpperCase(),toLowerCase()
+6. create a string with leadding and trailing whitespaces
+ print it , print it after using str.trim()
+ 7. String replacement using 
+ .replace(oldChar,newChar) , .replace(oldString,newString) 
+ 8. String splitting: create an array of strings  using , .split(regex) 
+ 9. Searching in string using .contains(String) , .startsWith(String)
+ .endsWith(suffix)
+ 10. String concatenation using prefix.concat(suffix) , str + str2
+ 11. StringBuilder demo: 
+ create a StringBuilder object 
+ append some text to it (.append(string))
+ reverse it (.reverse())
+ insert a string at a specific index using .insert(index,string)
+ this shows the mutability of StringBuilder
+ 12. formatting 
+ create few variables String , int , double 
+ print using System.out.printf() 
+ with format specifiers
+ %s String
+ %d int
+ %.2f double(2 decimal places)
+ 
+ 13. Immutability demo:
+
+ create a string
+ perform a replacement using .replace() method store the result 
+
+ print the string and the result
+ to see that the string is unchanged and new String is created with the changes
+
+ 
+ 
+*/
+
+
 class StringDemo {
 
 	public static void main(String args[]) {
