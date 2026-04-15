@@ -5,6 +5,49 @@
 import java.awt.*;
 import java.awt.event.*;
 
+/*
+import java.awt.*  for Frame , Label, TextField , Button
+   Frame:  defines a window with title , border and buttons for closing and minimizing
+   Label: displays a single line of text 
+   TextField: allows user to enter a single line of text
+   Button: creates a clickable button 
+import java.awt.event.* for ActionListener , WindowAdapter
+   ActionListener: interface for receiving action events( like button clicks)
+   WindowAdapter: abstract class for receiving window events (likee closing the window) 
+
+create a class that exteends Frame and implements ActionListender
+add datamembers for TextField: name,age,contact,father,income , Button: submit and label: message
+in the constructor do the following:
+  call setTitle(name) to name the window
+  call setSize(400,400) to set the size of the window
+  call setLayout(new GridLayout(7,2,10,10))
+    to set the layout of the window to a grid with 7 rows , 2 columns and 10 pixels of horizontal and vertical gap
+  call add method for:
+    each lable: Name,Age,Contact,Father's Name,Annual Income follower by corresponding text field constructor
+	txtField = new TextField()
+	add(txtField)
+
+ call add method for submit button and message label: 
+ btnSubmit = new Button("Submit")
+ lblMessage = new Label("")
+
+ add(btnSubmit)
+ add(lblMessage)
+
+ add action listener to the submit button:
+ btnSubmit.addActionListenner(this)
+
+ add window Listener to handle window closing event:
+
+ addWinddowListener(new WindowAdapter() {
+   public void windowClosing(WindowEvent we){
+     dispose();
+}})
+	
+setVisible(true) to display the window
+
+*/
+
 public class StudentRegistration extends Frame implements ActionListener {
 	TextField txtName, txtAge, txtContact, txtFather, txtIncome;
 	Button btnSubmit;
@@ -91,7 +134,7 @@ public class StudentRegistration extends Frame implements ActionListener {
 			return;
 		}
 
-		lblMessage.setText("Registration Succesfull!");
+		lblMessage.setText("Registration Successful!");
 	}
 
 	public static void main(String[] args) {
